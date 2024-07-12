@@ -23,7 +23,12 @@
     "lint": "npx eslint --ext .ts ./",
     "lint-fix": "npm run prettier && npx eslint --ext .ts --fix ./",
     "prettier": "prettier --write .",
-    "fresh-and-install-all": "npm run fresh && npm run install-all"
+    "fresh-and-install-all": "npm run fresh && npm run install-all",
+    "aws-login": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 249706158718.dkr.ecr.us-east-1.amazonaws.com",
+    "build-image": "npm run build-image --prefix ./Server",
+    "tag-image": "npm run tag-image --prefix ./Server",
+    "deploy-image": "npm run deploy-image --prefix ./Server",
+    "deploy-latest": "npm run aws-login && npm run build-image && npm run tag-image && npm run deploy-image"
   },
   "workspaces": [
     "00_Base",
