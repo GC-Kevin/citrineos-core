@@ -1,0 +1,20 @@
+{
+  "$id": "RemoteStopTransactionResponse16",
+  "title": "RemoteStopTransactionResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/RemoteStartStopStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "RemoteStartStopStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Rejected"],
+      "tsEnumNames": ["Accepted", "Rejected"]
+    }
+  }
+}

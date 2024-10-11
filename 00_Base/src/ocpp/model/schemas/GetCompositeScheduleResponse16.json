@@ -1,0 +1,80 @@
+{
+  "$id": "GetCompositeScheduleResponse16",
+  "title": "GetCompositeScheduleResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/GetCompositeScheduleStatusEnumType16"
+    },
+    "connectorId": {
+      "type": "integer"
+    },
+    "scheduleStart": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "chargingSchedule": {
+      "$ref": "#/definitions/ChargingScheduleType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "GetCompositeScheduleStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Rejected"],
+      "tsEnumNames": ["Accepted", "Rejected"]
+    },
+    "ChargingScheduleType16": {
+      "type": "object",
+      "properties": {
+        "duration": {
+          "type": "integer"
+        },
+        "startSchedule": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chargingRateUnit": {
+          "$ref": "#/definitions/ChargingRateUnitTypeEnumType16"
+        },
+        "chargingSchedulePeriod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChargingScheduleType16Period"
+          }
+        },
+        "minChargingRate": {
+          "type": "number",
+          "multipleOf": 0.1
+        }
+      },
+      "additionalProperties": false,
+      "required": ["chargingRateUnit", "chargingSchedulePeriod"]
+    },
+    "ChargingRateUnitTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["A", "W"],
+      "tsEnumNames": ["A", "W"]
+    },
+    "ChargingScheduleType16Period": {
+      "type": "object",
+      "properties": {
+        "startPeriod": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "number",
+          "multipleOf": 0.1
+        },
+        "numberPhases": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["startPeriod", "limit"]
+    }
+  }
+}

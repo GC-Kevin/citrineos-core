@@ -1,0 +1,8 @@
+{
+  "$id": "StatusNotificationResponse16",
+  "title": "StatusNotificationResponse16",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false,
+  "definitions": {}
+}

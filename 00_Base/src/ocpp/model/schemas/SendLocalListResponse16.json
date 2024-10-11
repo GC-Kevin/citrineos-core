@@ -1,0 +1,20 @@
+{
+  "$id": "SendLocalListResponse16",
+  "title": "SendLocalListResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/UpdateStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "UpdateStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Failed", "NotSupported", "VersionMismatch"],
+      "tsEnumNames": ["Accepted", "Failed", "NotSupported", "VersionMismatch"]
+    }
+  }
+}

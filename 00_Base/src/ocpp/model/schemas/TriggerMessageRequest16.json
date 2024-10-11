@@ -1,0 +1,37 @@
+{
+  "$id": "TriggerMessageRequest16",
+  "title": "TriggerMessageRequest16",
+  "type": "object",
+  "properties": {
+    "requestedMessage": {
+      "$ref": "#/definitions/MessageTriggerEnumType16"
+    },
+    "connectorId": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["requestedMessage"],
+  "definitions": {
+    "MessageTriggerEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "BootNotification",
+        "DiagnosticsStatusNotification",
+        "FirmwareStatusNotification",
+        "Heartbeat",
+        "MeterValues",
+        "StatusNotification"
+      ],
+      "tsEnumNames": [
+        "BootNotification",
+        "DiagnosticsStatusNotification",
+        "FirmwareStatusNotification",
+        "Heartbeat",
+        "MeterValues",
+        "StatusNotification"
+      ]
+    }
+  }
+}

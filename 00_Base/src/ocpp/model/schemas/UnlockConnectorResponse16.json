@@ -1,0 +1,20 @@
+{
+  "$id": "UnlockConnectorResponse16",
+  "title": "UnlockConnectorResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/UnlockStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "UnlockStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Unlocked", "UnlockFailed", "NotSupported"],
+      "tsEnumNames": ["Unlocked", "UnlockFailed", "NotSupported"]
+    }
+  }
+}

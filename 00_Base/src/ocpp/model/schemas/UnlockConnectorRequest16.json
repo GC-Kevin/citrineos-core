@@ -1,0 +1,13 @@
+{
+  "$id": "UnlockConnectorRequest16",
+  "title": "UnlockConnectorRequest16",
+  "type": "object",
+  "properties": {
+    "connectorId": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["connectorId"],
+  "definitions": {}
+}

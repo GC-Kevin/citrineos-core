@@ -1,0 +1,26 @@
+{
+  "$id": "ReserveNowResponse16",
+  "title": "ReserveNowResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/ReservationStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "ReservationStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Faulted", "Occupied", "Rejected", "Unavailable"],
+      "tsEnumNames": [
+        "Accepted",
+        "Faulted",
+        "Occupied",
+        "Rejected",
+        "Unavailable"
+      ]
+    }
+  }
+}

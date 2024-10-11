@@ -1,0 +1,127 @@
+{
+  "$id": "SetChargingProfileRequest16",
+  "title": "SetChargingProfileRequest16",
+  "type": "object",
+  "properties": {
+    "connectorId": {
+      "type": "integer"
+    },
+    "csChargingProfiles": {
+      "$ref": "#/definitions/ChargingProfileType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["connectorId", "csChargingProfiles"],
+  "definitions": {
+    "ChargingProfileType16": {
+      "type": "object",
+      "properties": {
+        "chargingProfileId": {
+          "type": "integer"
+        },
+        "transactionId": {
+          "type": "integer"
+        },
+        "stackLevel": {
+          "type": "integer"
+        },
+        "chargingProfilePurpose": {
+          "$ref": "#/definitions/ChargingProfilePurposeTypeEnumType16"
+        },
+        "chargingProfileKind": {
+          "$ref": "#/definitions/ChargingProfileKindTypeEnumType16"
+        },
+        "recurrencyKind": {
+          "$ref": "#/definitions/RecurrencyKindTypeEnumType16"
+        },
+        "validFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validTo": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chargingSchedule": {
+          "$ref": "#/definitions/ChargingScheduleType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "chargingProfileId",
+        "stackLevel",
+        "chargingProfilePurpose",
+        "chargingProfileKind",
+        "chargingSchedule"
+      ]
+    },
+    "ChargingProfilePurposeTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["ChargePointMaxProfile", "TxDefaultProfile", "TxProfile"],
+      "tsEnumNames": ["ChargePointMaxProfile", "TxDefaultProfile", "TxProfile"]
+    },
+    "ChargingProfileKindTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Absolute", "Recurring", "Relative"],
+      "tsEnumNames": ["Absolute", "Recurring", "Relative"]
+    },
+    "RecurrencyKindTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Daily", "Weekly"],
+      "tsEnumNames": ["Daily", "Weekly"]
+    },
+    "ChargingScheduleType16": {
+      "type": "object",
+      "properties": {
+        "duration": {
+          "type": "integer"
+        },
+        "startSchedule": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chargingRateUnit": {
+          "$ref": "#/definitions/ChargingRateUnitTypeEnumType16"
+        },
+        "chargingSchedulePeriod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChargingScheduleType16Period"
+          }
+        },
+        "minChargingRate": {
+          "type": "number",
+          "multipleOf": 0.1
+        }
+      },
+      "additionalProperties": false,
+      "required": ["chargingRateUnit", "chargingSchedulePeriod"]
+    },
+    "ChargingRateUnitTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["A", "W"],
+      "tsEnumNames": ["A", "W"]
+    },
+    "ChargingScheduleType16Period": {
+      "type": "object",
+      "properties": {
+        "startPeriod": {
+          "type": "integer"
+        },
+        "limit": {
+          "type": "number",
+          "multipleOf": 0.1
+        },
+        "numberPhases": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["startPeriod", "limit"]
+    }
+  }
+}

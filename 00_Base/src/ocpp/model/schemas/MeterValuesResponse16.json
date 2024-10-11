@@ -1,0 +1,8 @@
+{
+  "$id": "MeterValuesResponse16",
+  "title": "MeterValuesResponse16",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false,
+  "definitions": {}
+}

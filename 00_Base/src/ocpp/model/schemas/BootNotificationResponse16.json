@@ -1,0 +1,27 @@
+{
+  "$id": "BootNotificationResponse16",
+  "title": "BootNotificationResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/RegistrationStatusEnumType16"
+    },
+    "currentTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "interval": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status", "currentTime", "interval"],
+  "definitions": {
+    "RegistrationStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Pending", "Rejected"],
+      "tsEnumNames": ["Accepted", "Pending", "Rejected"]
+    }
+  }
+}

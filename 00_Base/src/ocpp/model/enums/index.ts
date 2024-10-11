@@ -1086,6 +1086,106 @@ export enum VPNEnumType {
   PPTP = 'PPTP',
 }
 
+export enum AuthorizationStatusEnumType16 {
+  Accepted = 'Accepted',
+  Blocked = 'Blocked',
+  Expired = 'Expired',
+  Invalid = 'Invalid',
+  ConcurrentTx = 'ConcurrentTx',
+}
+
+export enum AvailabilityStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  Scheduled = 'Scheduled',
+}
+
+export enum AvailabilityTypeEnumType16 {
+  Inoperative = 'Inoperative',
+  Operative = 'Operative',
+}
+
+export enum CancelReservationStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+}
+
+export enum ChargePointErrorCodeEnumType16 {
+  ConnectorLockFailure = 'ConnectorLockFailure',
+  EVCommunicationError = 'EVCommunicationError',
+  GroundFailure = 'GroundFailure',
+  HighTemperature = 'HighTemperature',
+  InternalError = 'InternalError',
+  LocalListConflict = 'LocalListConflict',
+  NoError = 'NoError',
+  OtherError = 'OtherError',
+  OverCurrentFailure = 'OverCurrentFailure',
+  PowerMeterFailure = 'PowerMeterFailure',
+  PowerSwitchFailure = 'PowerSwitchFailure',
+  ReaderFailure = 'ReaderFailure',
+  ResetFailure = 'ResetFailure',
+  UnderVoltage = 'UnderVoltage',
+  OverVoltage = 'OverVoltage',
+  WeakSignal = 'WeakSignal',
+}
+
+export enum ChargePointStatusEnumType16 {
+  Available = 'Available',
+  Preparing = 'Preparing',
+  Charging = 'Charging',
+  SuspendedEVSE = 'SuspendedEVSE',
+  SuspendedEV = 'SuspendedEV',
+  Finishing = 'Finishing',
+  Reserved = 'Reserved',
+  Unavailable = 'Unavailable',
+  Faulted = 'Faulted',
+}
+
+export enum ChargingProfileKindTypeEnumType16 {
+  Absolute = 'Absolute',
+  Recurring = 'Recurring',
+  Relative = 'Relative',
+}
+
+export enum ChargingProfilePurposeTypeEnumType16 {
+  ChargePointMaxProfile = 'ChargePointMaxProfile',
+  TxDefaultProfile = 'TxDefaultProfile',
+  TxProfile = 'TxProfile',
+}
+
+export enum ChargingProfileStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  NotSupported = 'NotSupported',
+}
+
+export enum ChargingProfileType16KindTypeEnumType16 {
+  Absolute = 'Absolute',
+  Recurring = 'Recurring',
+  Relative = 'Relative',
+}
+
+export enum ChargingProfileType16PurposeTypeEnumType16 {
+  ChargePointMaxProfile = 'ChargePointMaxProfile',
+  TxDefaultProfile = 'TxDefaultProfile',
+  TxProfile = 'TxProfile',
+}
+
+export enum ChargingRateUnitTypeEnumType16 {
+  A = 'A',
+  W = 'W',
+}
+
+export enum ClearCacheStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+}
+
+export enum ClearChargingProfileStatusEnumType16 {
+  Accepted = 'Accepted',
+  Unknown = 'Unknown',
+}
+
 export enum ComponentCriterionEnumType {
   Active = 'Active',
   Available = 'Available',
@@ -1093,8 +1193,206 @@ export enum ComponentCriterionEnumType {
   Problem = 'Problem',
 }
 
+export enum ConfigurationStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  RebootRequired = 'RebootRequired',
+  NotSupported = 'NotSupported',
+}
+
+export enum DataTransferStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  UnknownMessageId = 'UnknownMessageId',
+  UnknownVendorId = 'UnknownVendorId',
+}
+
+export enum DiagnosticsStatusEnumType16 {
+  Idle = 'Idle',
+  Uploaded = 'Uploaded',
+  UploadFailed = 'UploadFailed',
+  Uploading = 'Uploading',
+}
+
+export enum FirmwareStatusEnumType16 {
+  Downloaded = 'Downloaded',
+  DownloadFailed = 'DownloadFailed',
+  Downloading = 'Downloading',
+  Idle = 'Idle',
+  InstallationFailed = 'InstallationFailed',
+  Installing = 'Installing',
+  Installed = 'Installed',
+}
+
+export enum GetCompositeScheduleStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+}
+
+export enum LocationEnumType16 {
+  Cable = 'Cable',
+  EV = 'EV',
+  Inlet = 'Inlet',
+  Outlet = 'Outlet',
+  Body = 'Body',
+}
+
+export enum MeasurandEnumType16 {
+  Energy_Active_Export_Register = 'Energy.Active.Export.Register',
+  Energy_Active_Import_Register = 'Energy.Active.Import.Register',
+  Energy_Reactive_Export_Register = 'Energy.Reactive.Export.Register',
+  Energy_Reactive_Import_Register = 'Energy.Reactive.Import.Register',
+  Energy_Active_Export_Interval = 'Energy.Active.Export.Interval',
+  Energy_Active_Import_Interval = 'Energy.Active.Import.Interval',
+  Energy_Reactive_Export_Interval = 'Energy.Reactive.Export.Interval',
+  Energy_Reactive_Import_Interval = 'Energy.Reactive.Import.Interval',
+  Power_Active_Export = 'Power.Active.Export',
+  Power_Active_Import = 'Power.Active.Import',
+  Power_Offered = 'Power.Offered',
+  Power_Reactive_Export = 'Power.Reactive.Export',
+  Power_Reactive_Import = 'Power.Reactive.Import',
+  Power_Factor = 'Power.Factor',
+  Current_Import = 'Current.Import',
+  Current_Export = 'Current.Export',
+  Current_Offered = 'Current.Offered',
+  Voltage = 'Voltage',
+  Frequency = 'Frequency',
+  Temperature = 'Temperature',
+  SoC = 'SoC',
+  RPM = 'RPM',
+}
+
+export enum MessageTriggerEnumType16 {
+  BootNotification = 'BootNotification',
+  DiagnosticsStatusNotification = 'DiagnosticsStatusNotification',
+  FirmwareStatusNotification = 'FirmwareStatusNotification',
+  Heartbeat = 'Heartbeat',
+  MeterValues = 'MeterValues',
+  StatusNotification = 'StatusNotification',
+}
+
 export enum MonitoringCriterionEnumType {
   ThresholdMonitoring = 'ThresholdMonitoring',
   DeltaMonitoring = 'DeltaMonitoring',
   PeriodicMonitoring = 'PeriodicMonitoring',
+}
+
+export enum PhaseEnumType16 {
+  L1 = 'L1',
+  L2 = 'L2',
+  L3 = 'L3',
+  N = 'N',
+  L1_N = 'L1-N',
+  L2_N = 'L2-N',
+  L3_N = 'L3-N',
+  L1_L2 = 'L1-L2',
+  L2_L3 = 'L2-L3',
+  L3_L1 = 'L3-L1',
+}
+
+export enum ReadingContextEnumType16 {
+  Interruption_Begin = 'Interruption.Begin',
+  Interruption_End = 'Interruption.End',
+  Sample_Clock = 'Sample.Clock',
+  Sample_Periodic = 'Sample.Periodic',
+  Transaction_Begin = 'Transaction.Begin',
+  Transaction_End = 'Transaction.End',
+  Trigger = 'Trigger',
+  Other = 'Other',
+}
+
+export enum ReasonEnumType16 {
+  EmergencyStop = 'EmergencyStop',
+  EVDisconnected = 'EVDisconnected',
+  HardReset = 'HardReset',
+  Local = 'Local',
+  Other = 'Other',
+  PowerLoss = 'PowerLoss',
+  Reboot = 'Reboot',
+  Remote = 'Remote',
+  SoftReset = 'SoftReset',
+  UnlockCommand = 'UnlockCommand',
+  DeAuthorized = 'DeAuthorized',
+}
+
+export enum RecurrencyKindTypeEnumType16 {
+  Daily = 'Daily',
+  Weekly = 'Weekly',
+}
+
+export enum RegistrationStatusEnumType16 {
+  Accepted = 'Accepted',
+  Pending = 'Pending',
+  Rejected = 'Rejected',
+}
+
+export enum RemoteStartStopStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+}
+
+export enum ReservationStatusEnumType16 {
+  Accepted = 'Accepted',
+  Faulted = 'Faulted',
+  Occupied = 'Occupied',
+  Rejected = 'Rejected',
+  Unavailable = 'Unavailable',
+}
+
+export enum ResetStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+}
+
+export enum ResetTypeEnumType16 {
+  Hard = 'Hard',
+  Soft = 'Soft',
+}
+
+export enum TriggerMessageStatusEnumType16 {
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  NotImplemented = 'NotImplemented',
+}
+
+export enum UnitOfMeasureEnumType16 {
+  Wh = 'Wh',
+  kWh = 'kWh',
+  varh = 'varh',
+  kvarh = 'kvarh',
+  W = 'W',
+  kW = 'kW',
+  VA = 'VA',
+  kVA = 'kVA',
+  var = 'var',
+  kvar = 'kvar',
+  A = 'A',
+  V = 'V',
+  K = 'K',
+  Celsius = 'Celsius',
+  Fahrenheit = 'Fahrenheit',
+  Percent = 'Percent',
+}
+
+export enum UnlockStatusEnumType16 {
+  Unlocked = 'Unlocked',
+  UnlockFailed = 'UnlockFailed',
+  NotSupported = 'NotSupported',
+}
+
+export enum UpdateStatusEnumType16 {
+  Accepted = 'Accepted',
+  Failed = 'Failed',
+  NotSupported = 'NotSupported',
+  VersionMismatch = 'VersionMismatch',
+}
+
+export enum UpdateTypeEnumType16 {
+  Differential = 'Differential',
+  Full = 'Full',
+}
+
+export enum ValueFormatEnumType16 {
+  Raw = 'Raw',
+  SignedData = 'SignedData',
 }

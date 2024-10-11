@@ -1,0 +1,18 @@
+{
+  "$id": "ChangeConfigurationRequest16",
+  "title": "ChangeConfigurationRequest16",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "value": {
+      "type": "string",
+      "maxLength": 500
+    }
+  },
+  "additionalProperties": false,
+  "required": ["key", "value"],
+  "definitions": {}
+}

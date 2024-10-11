@@ -1,0 +1,16 @@
+{
+  "$id": "GetConfigurationRequest16",
+  "title": "GetConfigurationRequest16",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 50
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {}
+}

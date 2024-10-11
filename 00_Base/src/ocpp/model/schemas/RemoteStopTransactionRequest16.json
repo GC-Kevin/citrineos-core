@@ -1,0 +1,13 @@
+{
+  "$id": "RemoteStopTransactionRequest16",
+  "title": "RemoteStopTransactionRequest16",
+  "type": "object",
+  "properties": {
+    "transactionId": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["transactionId"],
+  "definitions": {}
+}

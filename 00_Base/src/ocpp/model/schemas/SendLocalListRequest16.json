@@ -1,0 +1,73 @@
+{
+  "$id": "SendLocalListRequest16",
+  "title": "SendLocalListRequest16",
+  "type": "object",
+  "properties": {
+    "listVersion": {
+      "type": "integer"
+    },
+    "localAuthorizationList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AuthorizationDataType16"
+      }
+    },
+    "updateType": {
+      "$ref": "#/definitions/UpdateTypeEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["listVersion", "updateType"],
+  "definitions": {
+    "AuthorizationDataType16": {
+      "type": "object",
+      "properties": {
+        "idTag": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "idTagInfo": {
+          "$ref": "#/definitions/IdTagInfoType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["idTag"]
+    },
+    "IdTagInfoType16": {
+      "type": "object",
+      "properties": {
+        "expiryDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentIdTag": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "status": {
+          "$ref": "#/definitions/AuthorizationStatusEnumType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["status"]
+    },
+    "AuthorizationStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Blocked", "Expired", "Invalid", "ConcurrentTx"],
+      "tsEnumNames": [
+        "Accepted",
+        "Blocked",
+        "Expired",
+        "Invalid",
+        "ConcurrentTx"
+      ]
+    },
+    "UpdateTypeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Differential", "Full"],
+      "tsEnumNames": ["Differential", "Full"]
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "$id": "MeterValuesRequest16",
+  "title": "MeterValuesRequest16",
+  "type": "object",
+  "properties": {
+    "connectorId": {
+      "type": "integer"
+    },
+    "transactionId": {
+      "type": "integer"
+    },
+    "meterValue": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MeterValueType16"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["connectorId", "meterValue"],
+  "definitions": {
+    "MeterValueType16": {
+      "type": "object",
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sampledValue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SampledValueType16"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": ["timestamp", "sampledValue"]
+    },
+    "SampledValueType16": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/definitions/ReadingContextEnumType16"
+        },
+        "format": {
+          "$ref": "#/definitions/ValueFormatEnumType16"
+        },
+        "measurand": {
+          "$ref": "#/definitions/MeasurandEnumType16"
+        },
+        "phase": {
+          "$ref": "#/definitions/PhaseEnumType16"
+        },
+        "location": {
+          "$ref": "#/definitions/LocationEnumType16"
+        },
+        "unit": {
+          "$ref": "#/definitions/UnitOfMeasureEnumType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["value"]
+    },
+    "ReadingContextEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "Interruption.Begin",
+        "Interruption.End",
+        "Sample.Clock",
+        "Sample.Periodic",
+        "Transaction.Begin",
+        "Transaction.End",
+        "Trigger",
+        "Other"
+      ],
+      "tsEnumNames": [
+        "Interruption_Begin",
+        "Interruption_End",
+        "Sample_Clock",
+        "Sample_Periodic",
+        "Transaction_Begin",
+        "Transaction_End",
+        "Trigger",
+        "Other"
+      ]
+    },
+    "ValueFormatEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Raw", "SignedData"],
+      "tsEnumNames": ["Raw", "SignedData"]
+    },
+    "MeasurandEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "Energy.Active.Export.Register",
+        "Energy.Active.Import.Register",
+        "Energy.Reactive.Export.Register",
+        "Energy.Reactive.Import.Register",
+        "Energy.Active.Export.Interval",
+        "Energy.Active.Import.Interval",
+        "Energy.Reactive.Export.Interval",
+        "Energy.Reactive.Import.Interval",
+        "Power.Active.Export",
+        "Power.Active.Import",
+        "Power.Offered",
+        "Power.Reactive.Export",
+        "Power.Reactive.Import",
+        "Power.Factor",
+        "Current.Import",
+        "Current.Export",
+        "Current.Offered",
+        "Voltage",
+        "Frequency",
+        "Temperature",
+        "SoC",
+        "RPM"
+      ],
+      "tsEnumNames": [
+        "Energy_Active_Export_Register",
+        "Energy_Active_Import_Register",
+        "Energy_Reactive_Export_Register",
+        "Energy_Reactive_Import_Register",
+        "Energy_Active_Export_Interval",
+        "Energy_Active_Import_Interval",
+        "Energy_Reactive_Export_Interval",
+        "Energy_Reactive_Import_Interval",
+        "Power_Active_Export",
+        "Power_Active_Import",
+        "Power_Offered",
+        "Power_Reactive_Export",
+        "Power_Reactive_Import",
+        "Power_Factor",
+        "Current_Import",
+        "Current_Export",
+        "Current_Offered",
+        "Voltage",
+        "Frequency",
+        "Temperature",
+        "SoC",
+        "RPM"
+      ]
+    },
+    "PhaseEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "L1",
+        "L2",
+        "L3",
+        "N",
+        "L1-N",
+        "L2-N",
+        "L3-N",
+        "L1-L2",
+        "L2-L3",
+        "L3-L1"
+      ],
+      "tsEnumNames": [
+        "L1",
+        "L2",
+        "L3",
+        "N",
+        "L1_N",
+        "L2_N",
+        "L3_N",
+        "L1_L2",
+        "L2_L3",
+        "L3_L1"
+      ]
+    },
+    "LocationEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Cable", "EV", "Inlet", "Outlet", "Body"],
+      "tsEnumNames": ["Cable", "EV", "Inlet", "Outlet", "Body"]
+    },
+    "UnitOfMeasureEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "Wh",
+        "kWh",
+        "varh",
+        "kvarh",
+        "W",
+        "kW",
+        "VA",
+        "kVA",
+        "var",
+        "kvar",
+        "A",
+        "V",
+        "K",
+        "Celsius",
+        "Fahrenheit",
+        "Percent"
+      ],
+      "tsEnumNames": [
+        "Wh",
+        "kWh",
+        "varh",
+        "kvarh",
+        "W",
+        "kW",
+        "VA",
+        "kVA",
+        "var",
+        "kvar",
+        "A",
+        "V",
+        "K",
+        "Celsius",
+        "Fahrenheit",
+        "Percent"
+      ]
+    }
+  }
+}

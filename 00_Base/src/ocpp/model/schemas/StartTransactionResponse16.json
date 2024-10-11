@@ -1,0 +1,47 @@
+{
+  "$id": "StartTransactionResponse16",
+  "title": "StartTransactionResponse16",
+  "type": "object",
+  "properties": {
+    "idTagInfo": {
+      "$ref": "#/definitions/IdTagInfoType16"
+    },
+    "transactionId": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["idTagInfo", "transactionId"],
+  "definitions": {
+    "IdTagInfoType16": {
+      "type": "object",
+      "properties": {
+        "expiryDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentIdTag": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "status": {
+          "$ref": "#/definitions/AuthorizationStatusEnumType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["status"]
+    },
+    "AuthorizationStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Blocked", "Expired", "Invalid", "ConcurrentTx"],
+      "tsEnumNames": [
+        "Accepted",
+        "Blocked",
+        "Expired",
+        "Invalid",
+        "ConcurrentTx"
+      ]
+    }
+  }
+}

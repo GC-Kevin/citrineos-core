@@ -1,0 +1,20 @@
+{
+  "$id": "ClearChargingProfileResponse16",
+  "title": "ClearChargingProfileResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/ClearChargingProfileStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "ClearChargingProfileStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Unknown"],
+      "tsEnumNames": ["Accepted", "Unknown"]
+    }
+  }
+}

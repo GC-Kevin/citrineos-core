@@ -1,0 +1,13 @@
+{
+  "$id": "GetDiagnosticsResponse16",
+  "title": "GetDiagnosticsResponse16",
+  "type": "object",
+  "properties": {
+    "fileName": {
+      "type": "string",
+      "maxLength": 255
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {}
+}

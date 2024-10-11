@@ -1,0 +1,20 @@
+{
+  "$id": "ClearCacheResponse16",
+  "title": "ClearCacheResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/ClearCacheStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "ClearCacheStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Rejected"],
+      "tsEnumNames": ["Accepted", "Rejected"]
+    }
+  }
+}

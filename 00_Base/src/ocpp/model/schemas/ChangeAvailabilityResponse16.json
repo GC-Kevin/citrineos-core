@@ -1,0 +1,20 @@
+{
+  "$id": "ChangeAvailabilityResponse16",
+  "title": "ChangeAvailabilityResponse16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/AvailabilityStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "AvailabilityStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Rejected", "Scheduled"],
+      "tsEnumNames": ["Accepted", "Rejected", "Scheduled"]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$id": "AuthorizeResponse16",
+  "title": "AuthorizeResponse16",
+  "type": "object",
+  "properties": {
+    "idTagInfo": {
+      "$ref": "#/definitions/IdTagInfoType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["idTagInfo"],
+  "definitions": {
+    "IdTagInfoType16": {
+      "type": "object",
+      "properties": {
+        "expiryDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentIdTag": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "status": {
+          "$ref": "#/definitions/AuthorizationStatusEnumType16"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["status"]
+    },
+    "AuthorizationStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": ["Accepted", "Blocked", "Expired", "Invalid", "ConcurrentTx"],
+      "tsEnumNames": [
+        "Accepted",
+        "Blocked",
+        "Expired",
+        "Invalid",
+        "ConcurrentTx"
+      ]
+    }
+  }
+}

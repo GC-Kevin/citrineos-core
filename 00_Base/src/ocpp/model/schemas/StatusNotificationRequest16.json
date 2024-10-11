@@ -1,0 +1,73 @@
+{
+  "$id": "ChargePointStatusEnumType16NotificationRequest16",
+  "title": "ChargePointStatusEnumType16NotificationRequest16",
+  "type": "object",
+  "properties": {
+    "connectorId": {
+      "type": "integer"
+    },
+    "errorCode": {
+      "$ref": "#/definitions/ChargePointErrorCodeEnumType16"
+    },
+    "info": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "status": {
+      "$ref": "#/definitions/ChargePointStatusEnumType16"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "vendorId": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "vendorChargePointErrorCodeEnumType16": {
+      "type": "string",
+      "maxLength": 50
+    }
+  },
+  "additionalProperties": false,
+  "required": ["connectorId", "errorCode", "status"],
+  "definitions": {
+    "ChargePointErrorCodeEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "ConnectorLockFailure",
+        "EVCommunicationError",
+        "GroundFailure",
+        "HighTemperature",
+        "InternalError",
+        "LocalListConflict",
+        "NoError",
+        "OtherError",
+        "OverCurrentFailure",
+        "PowerMeterFailure",
+        "PowerSwitchFailure",
+        "ReaderFailure",
+        "ResetFailure",
+        "UnderVoltage",
+        "OverVoltage",
+        "WeakSignal"
+      ]
+    },
+    "ChargePointStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "Available",
+        "Preparing",
+        "Charging",
+        "SuspendedEVSE",
+        "SuspendedEV",
+        "Finishing",
+        "Reserved",
+        "Unavailable",
+        "Faulted"
+      ]
+    }
+  }
+}

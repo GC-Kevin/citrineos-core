@@ -1,0 +1,36 @@
+{
+  "$id": "FirmwareFirmwareStatusEnumType16NotificationRequest16",
+  "title": "FirmwareFirmwareStatusEnumType16NotificationRequest16",
+  "type": "object",
+  "properties": {
+    "status": {
+      "$ref": "#/definitions/FirmwareStatusEnumType16"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["status"],
+  "definitions": {
+    "FirmwareStatusEnumType16": {
+      "type": "string",
+      "additionalProperties": false,
+      "enum": [
+        "Downloaded",
+        "DownloadFailed",
+        "Downloading",
+        "Idle",
+        "InstallationFailed",
+        "Installing",
+        "Installed"
+      ],
+      "tsEnumNames": [
+        "Downloaded",
+        "DownloadFailed",
+        "Downloading",
+        "Idle",
+        "InstallationFailed",
+        "Installing",
+        "Installed"
+      ]
+    }
+  }
+}

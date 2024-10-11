@@ -1,0 +1,8 @@
+{
+  "$id": "GetLocalListVersionRequest16",
+  "title": "GetLocalListVersionRequest16",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false,
+  "definitions": {}
+}

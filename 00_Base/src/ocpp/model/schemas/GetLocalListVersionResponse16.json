@@ -1,0 +1,13 @@
+{
+  "$id": "GetLocalListVersionResponse16",
+  "title": "GetLocalListVersionResponse16",
+  "type": "object",
+  "properties": {
+    "listVersion": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["listVersion"],
+  "definitions": {}
+}
