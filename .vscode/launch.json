@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+      {
+         "type": "node",
+         "request": "attach",
+         "name": "Attach to Server in Docker",
+         "port": 9229,
+         "timeout": 10000,
+         "cwd": "${workspaceFolder}", // the root where everything is based on
+         "localRoot": "${workspaceFolder}", // root of all server files
+         "remoteRoot": "/usr/local/apps/citrineos", // workspace path which was set in the dockerfile
+         "outFiles": ["${workspaceFolder}/**/*.js"], // all compiled JavaScript files
+         "skipFiles": [
+            "${workspaceFolder}/**/node_modules/**",
+            "${workspaceFolder}/node_modules/**",
+            "<node_internals>/**"
+         ],
+         "sourceMaps": true,
+         "internalConsoleOptions": "neverOpen",
+         "trace": true
+      },
+  ]
+}
